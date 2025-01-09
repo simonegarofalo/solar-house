@@ -1,0 +1,25 @@
+---
+// Props per rendere il bottone flessibile
+const { text, href, variant = "primary" } = Astro.props;
+---
+
+<a href={href} class={`btn ${variant}`}>
+  {text}
+</a>
+
+<style>
+  /* Stili di base per il bottone usando Tailwind */
+  .btn {
+    @apply px-6 py-2 rounded-3xl text-white font-medium transition duration-100;
+  }
+
+  /* Variante primaria (es. per CTA) */
+  .primary {
+    @apply bg-white text-black hover:bg-slate-100;
+  }
+
+  /* Variante secondaria (es. per Navbar) */
+  .secondary {
+    @apply bg-blue-900 hover:bg-blue-800;
+  }
+</style>

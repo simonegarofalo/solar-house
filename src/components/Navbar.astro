@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Button from "../components/Button.astro";
 const links = [
   { name: "home", href: "/" },
   { name: "portfolio", href: "/" },
@@ -13,22 +14,9 @@ const links = [
     <a href="/" class="text-white text-2xl font-bold">Logo</a>
 
     <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="md:hidden text-white text-2xl"> ☰ </button>
-
-    <!-- Links -->
-    <ul
-      id="menu"
-      class="flex flex-row space-x-4 text-white md:flex-row md:space-x-8"
-    >
-      {
-        links.map((link) => (
-          <li>
-            <a href={link.href} class="">
-              {link.name}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    <div class="flex space-x-3">
+      <Button text="Sign up" href="/signup" variant="primary" />
+      <Button text="Log in" href="/login" variant="secondary" />
+    </div>
   </div>
 </nav>
