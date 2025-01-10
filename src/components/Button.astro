@@ -15,11 +15,11 @@ const { text, href, variant = "primary" } = Astro.props;
 
   /* Variante primaria (es. per CTA) */
   .primary {
-    @apply bg-white text-black hover:bg-slate-100;
+    @apply bg-white border-solid border-2 text-black hover:bg-gray-100;
   }
 
   /* Variante secondaria (es. per Navbar) */
   .secondary {
-    @apply bg-blue-900 hover:bg-blue-800;
+    @apply bg-blue-700 hover:bg-blue-800;
   }
 </style>
